@@ -1,0 +1,27 @@
+/** Frameworks */
+
+.frameworks-section {
+    display: flex;
+    justify-content: center;
+}
+
+.frameworks-card {
+    display: inline-block;
+    box-shadow: 2px 2px 20px #b5b4fc;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 8px;
+    text-align: left;
+    background: white;
+
+}
+
+.frameworks-card>img {
+    width: 100px;
+    height: 100px;
+}
+
+.frameworks-section {
+    text-align: center;
+    margin: 40px 0px;
+}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}About me{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="about-section" id="about">
+    <div class="content">
+      <h2>Software Developer</h2>
+
+      <img src="{% static 'img/profile.jpg' %}" alt="profile" />
+
+      <p class="text-about">
+        Hello, my name is Edgar Landa, I am a Computer Engineer graduated from
+        the Autonomous University of Baja California and a Student at San
+        Diego Global Knowledge University of the Full Stack Developer
+        Immersive course, in general I like all references to development or
+        technologies. I like to learn daily and be informed about new tool
+        trends that help develop and improve the quality of software in
+        general.
+      </p>
+    </div>
+  </section>
+{% endblock content %}

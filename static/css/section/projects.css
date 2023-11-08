@@ -1,0 +1,28 @@
+/** Projects */
+.projects {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+
+}
+
+.project-card {
+    display: inline-block;
+    box-shadow: 2px 2px 20px #b5b4fc;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 8px;
+    text-align: left;
+    background: white;
+    max-width: 500px;
+}
+
+.project-card>img {
+    max-width: 445px;
+}
+
+.project-card>.technologies {
+    padding: 4px;
+    margin: 4px;
+    text-align: center;
+}
