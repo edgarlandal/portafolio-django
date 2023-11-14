@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% block title %}Projects{% endblock title %} 
+{% load static %} 
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/section/projects.css' %}">
+{% endblock style %}
+
+{% block content %}
+<section class="projects-section center">
+  <h2>Projects</h2>
+  <a href="{% url "project_new" %}">New Project</a>
+  <div class="projects-list">
+    {% for project in projects %}
+    <div class="project-card">
+      <a href="{{project.repository}}" target="_blank">
+        <img class="img-project" src="{{project.img}}" alt="" />
+        <p>{{project.name}}</p>
+        <p>{{project.description}}</p>
+        <p>{{project.year}}</p>
+        <div class="technologies">
+          {% for tech in project.technologies.all %}
+            <label>{{tech.name}}</label>
+          {% endfor %}
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}

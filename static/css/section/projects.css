@@ -1,9 +1,27 @@
 /** Projects */
-.projects {
+.projects-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 40px 0px;
+    align-items: center;
+    padding: 60px 0px;
+}
 
+.projects-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 5px #b5b4fc;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.projects-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-card {
@@ -14,15 +32,26 @@
     margin: 8px;
     text-align: left;
     background: white;
-    max-width: 500px;
 }
 
-.project-card>img {
+.img-project {
     max-width: 445px;
+    height: 280px;
 }
 
 .project-card>.technologies {
     padding: 4px;
     margin: 4px;
     text-align: center;
+}
+
+.project-card>a {
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 1378px) {
+    .projects-section {
+
+    }
 }

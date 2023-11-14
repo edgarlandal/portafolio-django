@@ -1,0 +1,29 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} New Projects {% endblock title %}
+
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/section/projects.css' %}">
+{% endblock style %}
+
+
+{% block content %}
+<section class="projects-form">
+  <h2>Create a new project</h2>
+  <form id="project-form" method="post" enctype="multipart/form-data">
+    
+    {% csrf_token %} 
+
+    {{ form.name }} 
+    {{ form.description }} 
+    {{ form.year }} 
+    {{ form.repository }} 
+    {{ form.img }}
+    {{ form.technologies }}
+
+    <button class="primary-button" type="submit">Create project</button>
+  </form>
+</section>
+{% endblock content %}

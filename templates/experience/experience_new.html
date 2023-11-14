@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} New experience {% endblock title %}
+
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/section/experience.css' %}">
+{% endblock style %}
+
+
+{% block content %}
+<section class="experience-form">
+  <h2>Create a new experiences</h2>
+  <form id="experience-form" method="post" enctype="multipart/form-data">
+    
+    {% csrf_token %} 
+
+    {{ form.entity }} 
+    {{ form.title }} 
+    {{ form.description }} 
+    {{ form.period }} 
+    {{ form.technologies }}
+
+    <button class="primary-button" type="submit">Create project</button>
+  </form>
+</section>
+{% endblock content %}

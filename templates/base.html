@@ -6,15 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="{% static "/css/base.css" %}">
-    <link rel="stylesheet" href="{% static "/css/header.css" %}">
-    <link rel="stylesheet" href="{% static "/css/footer.css" %}">
-    <link rel="stylesheet" href="{% static "/css/section/about.css" %}">
-    <link rel="stylesheet" href="{% static "/css/section/skills.css" %}">
-    <link rel="stylesheet" href="{% static "/css/section/lenguages.css" %}">
-    <link rel="stylesheet" href="{% static "/css/section/frameworks.css" %}">
-    <link rel="stylesheet" href="{% static "/css/section/tools.css" %}">
-    <link rel="stylesheet" href="{% static "/css/section/contact.css" %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section/skills.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section/lenguages.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section/frameworks.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section/tools.css' %}">
+    <link rel="stylesheet" href="{% static 'css/section/contact.css' %}">
+
+    {% block style %}
+        
+    {% endblock style %}
+    
     <link
         href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap"
         rel="stylesheet"
@@ -25,8 +30,9 @@
     <section class="navbar">
         <nav>
           <a href="{% url "home" %}">About</a>
+          <a href="{% url "project_list" %}">Projects</a>
+          <a href="{% url "experience_list" %}">Experiences</a>
           <a href="{% url "contact" %}">Contact</a>
-          {% comment %} <a href="index.html">Contact</a> {% endcomment %}
         </nav>
     </section>
 

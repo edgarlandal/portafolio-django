@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block title %} Experiences {% endblock title %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/section/experience.css' %}">
+{% endblock style %}
+
+
+{% block content %}
+<section class="experience-section">
+    <h2>Experiences</h2>
+    <a class="button-new" href="{% url "experience_new" %}">New experience</a>
+    <div class="experience-list">
+      {% for experience in experiences %}
+      <div class="experience-card">
+        <div>
+          <div class="text">
+            <p>{{experience.entity}}</p>
+            <p>{{experience.title}}</p>
+            <p>{{experience.description}}</p>
+            <p>{{experience.period}}</p>
+          </div>
+
+          <div class="technologies">
+            {% for tech in experience.technologies.all %}
+              <label>{{tech.name}}</label>
+            {% endfor %}
+          </div> 
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

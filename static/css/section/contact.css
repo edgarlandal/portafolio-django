@@ -23,11 +23,26 @@
 }
 
 input,
-textarea {
+textarea  {
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
     width: 90%;
+    font-size: larger;
+}
+
+select {
+    width: 91%;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+option {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
     font-size: larger;
 }
 
