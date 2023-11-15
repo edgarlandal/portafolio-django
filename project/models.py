@@ -4,6 +4,7 @@ types = [
     ("Leguage", "Leguage"),
     ("Frameworks", "Frameworks"),
     ("Tools", "Tools"),
+    ("DataBase","DataBase"),
     ("Other", "Other"),
 ]
 

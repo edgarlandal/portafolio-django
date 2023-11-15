@@ -22,5 +22,50 @@
         general.
       </p>
     </div>
+
+    <h2>Lenguages</h2>
+    <div class="tech-container">
+      {% for t in lenguage %}
+        <div class="tech-card">
+          <img src="{{t.img}}" alt="{{t.name}}" class="img-tech">
+        </div>
+      {% endfor %}
+    </div>
+
+    <h2>Frameworks</h2>
+    <div class="tech-container">
+      {% for t in framework %}
+        <div class="tech-card">
+          <img src="{{t.img}}" alt="{{t.name}}" class="img-tech">
+        </div>
+      {% endfor %}
+    </div>
+
+    <h2>Tools</h2>
+    <div class="tech-container">
+      {% for t in tools %}
+        <div class="tech-card">
+          <img src="{{t.img}}" alt="{{t.name}}" class="img-tech">
+        </div>
+      {% endfor %}
+    </div>
+
+    <h2>Data Bases</h2>
+    <div class="tech-container">
+      {% for t in db %}
+        <div class="tech-card">
+          <img src="{{t.img}}" alt="{{t.name}}" class="img-tech">
+        </div>
+      {% endfor %}
+    </div>
+
+    <h2>Other</h2>
+    <div class="tech-container">
+      {% for t in other %}
+        <div class="tech-card">
+          <img src="{{t.img}}" alt="{{t.name}}" class="img-tech">
+        </div>
+      {% endfor %}
+    </div>
   </section>
 {% endblock content %}
